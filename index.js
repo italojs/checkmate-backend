@@ -334,6 +334,7 @@ const startApp = async () => {
 	app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(openApiSpec));
 
 	//routes
+	app.use("/", (req, res) => res.sendStatus(200)); // return 200
 	app.use("/api/v1/auth", authRoutes.getRouter());
 	app.use("/api/v1/settings", verifyJWT, settingsRoutes.getRouter());
 	app.use("/api/v1/invite", inviteRoutes.getRouter());
