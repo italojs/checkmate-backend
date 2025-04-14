@@ -98,7 +98,7 @@ const openApiSpec = JSON.parse(
 
 let server;
 
-const PORT = 5000;
+const PORT = 3000;
 
 const shutdown = async () => {
 	if (isShuttingDown) {
